@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Hafiz Sohaib Fraz | ENT & Face Surgeon</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
+        
+        /* Custom Animations */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+        }
+        .animate-float { animation: float 4s ease-in-out infinite; }
+
+        .glass {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        /* Scroll Reveal Animation */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile Menu Transition */
+        #mobile-menu {
+            transition: max-height 0.3s ease-in-out;
+            max-height: 0;
+            overflow: hidden;
+        }
+        #mobile-menu.open {
+            max-height: 400px;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <nav class="fixed top-0 w-full z-50 glass shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20 items-center">
+                <div class="flex items-center gap-2">
+                    <div class="bg-blue-600 p-2 rounded-lg text-white">
+                        <i class="fas fa-stethoscope text-xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="font-bold text-lg leading-none text-blue-900">Dr. Hafiz Sohaib Fraz</h1>
+                        <p class="text-xs text-teal-600 font-medium tracking-wide">ENT & FACE SURGEON</p>
+                    </div>
+                </div>
+                
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-sm font-medium hover:text-blue-600 transition">Home</a>
+                    <a href="#services" class="text-sm font-medium hover:text-blue-600 transition">Services</a>
+                    <a href="#mockup" class="text-sm font-medium hover:text-blue-600 transition">Gallery</a>
+                    <a href="#location" class="text-sm font-medium hover:text-blue-600 transition text-white bg-blue-600 px-5 py-2 rounded-full hover:bg-blue-700">Contact Now</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button onclick="toggleMenu()" class="text-slate-600 p-2">
+                        <i class="fas fa-bars text-2xl" id="menu-icon"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Mobile Dropdown -->
+        <div id="mobile-menu" class="md:hidden bg-white border-t px-4">
+            <div class="flex flex-col py-4 space-y-4">
+                <a href="#home" onclick="toggleMenu()" class="font-medium text-slate-700">Home</a>
+                <a href="#services" onclick="toggleMenu()" class="font-medium text-slate-700">Services</a>
+                <a href="#mockup" onclick="toggleMenu()" class="font-medium text-slate-700">Gallery</a>
+                <a href="#location" onclick="toggleMenu()" class="inline-block bg-blue-600 text-white text-center py-3 rounded-xl font-bold">Contact Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header id="home" class="relative pt-32 pb-20 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full bg-gradient-to-br from-blue-50 to-green-50 -z-10"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-12 items-center">
+            <div class="reveal">
+                <span class="inline-block py-1 px-3 bg-teal-100 text-teal-700 rounded-full text-xs font-bold mb-4 tracking-wider uppercase">Shaikh Zayed Hospital Lahore</span>
+                <h2 class="text-4xl md:text-6xl font-bold text-slate-900 leading-tight mb-6">
+                    Expert <span class="text-blue-600">ENT & Face</span> Surgical Care
+                </h2>
+                <p class="text-lg text-slate-600 mb-8 max-w-lg">
+                    Providing advanced medical solutions for Ear, Nose, Face, and Neck. Trust in experience for your health and confidence.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="tel:03271151540" class="flex items-center gap-2 bg-blue-600 text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:bg-blue-700 hover:-translate-y-1 transition transform">
+                        <i class="fas fa-phone"></i> 0327-1151540
+                    </a>
+                    <a href="https://wa.me/923271151540" class="flex items-center gap-2 bg-green-500 text-white px-8 py-4 rounded-2xl font-bold shadow-lg hover:bg-green-600 hover:-translate-y-1 transition transform">
+                        <i class="fab fa-whatsapp text-xl"></i> WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <!-- Animated Mockup Card -->
+            <div class="flex justify-center lg:justify-end reveal">
+                <div class="w-full max-w-[340px] md:max-w-[400px] animate-float">
+                    <!-- CSS Instagram Mockup -->
+                    <div class="bg-white rounded-3xl shadow-2xl overflow-hidden border border-slate-100">
+                        <!-- Profile Header -->
+                        <div class="p-4 flex items-center justify-between">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-yellow-400 via-red-500 to-purple-600 p-[2px]">
+                                    <div class="w-full h-full rounded-full bg-white p-0.5">
+                                        <div class="w-full h-full rounded-full bg-blue-100 flex items-center justify-center">
+                                            <i class="fas fa-user-md text-blue-600 text-sm"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <p class="text-sm font-bold text-slate-800 leading-none">dr_sohaib_fraz</p>
+                                    <p class="text-[10px] text-slate-500">Shaikh Zayed Hospital</p>
+                                </div>
+                            </div>
+                            <i class="fas fa-ellipsis-h text-slate-400"></i>
+                        </div>
+                        <!-- Content Body -->
+                        <div class="aspect-square bg-gradient-to-br from-blue-600 to-teal-400 flex flex-col items-center justify-center p-8 text-center text-white relative">
+                            <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')]"></div>
+                            <i class="fas fa-hospital-user text-6xl mb-4"></i>
+                            <h3 class="text-2xl font-bold mb-2">ENT SURGERY</h3>
+                            <p class="text-sm opacity-90">Expert care for Face & Neck related complications</p>
+                        </div>
+                        <!-- Interactions -->
+                        <div class="p-4">
+                            <div class="flex justify-between mb-4">
+                                <div class="flex gap-4">
+                                    <i class="far fa-heart text-2xl text-slate-700"></i>
+                                    <i class="far fa-comment text-2xl text-slate-700"></i>
+                                    <i class="far fa-paper-plane text-2xl text-slate-700"></i>
+                                </div>
+                                <i class="far fa-bookmark text-2xl text-slate-700"></i>
+                            </div>
+                            <p class="text-sm font-bold mb-1">1,248 likes</p>
+                            <p class="text-sm"><span class="font-bold">dr_sohaib_fraz</span> Dedicated to providing the best patient care in Lahore. #ENT #Surgeon #Pakistan</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="services" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-4">Clinical Services</h2>
+                <div class="h-1.5 w-20 bg-blue-600 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Service 1 -->
+                <div class="reveal p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-blue-600 hover:text-white transition group duration-300">
+                    <div class="w-14 h-14 bg-blue-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
+                        <i class="fas fa-ear-listen text-2xl text-blue-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Ear Surgery</h3>
+                    <p class="text-slate-600 group-hover:text-white/90 leading-relaxed">Advanced treatment for hearing loss, infections, and reconstructive ear surgeries.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="reveal p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-teal-600 hover:text-white transition group duration-300">
+                    <div class="w-14 h-14 bg-teal-100 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
+                        <i class="fas fa-nose text-2xl text-teal-600 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Nose & Sinus</h3>
+                    <p class="text-slate-600 group-hover:text-white/90 leading-relaxed">Specialized care for deviated septums, sinusitis, and functional rhinoplasty.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="reveal p-8 rounded-3xl bg-slate-50 border border-slate-100 hover:bg-blue-900 hover:text-white transition group duration-300">
+                    <div class="w-14 h-14 bg-blue-200 rounded-2xl flex items-center justify-center mb-6 group-hover:bg-white/20">
+                        <i class="fas fa-user-tie text-2xl text-blue-900 group-hover:text-white"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Face & Neck</h3>
+                    <p class="text-slate-600 group-hover:text-white/90 leading-relaxed">Comprehensive management of head and neck tumors and cosmetic facial procedures.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="mockup" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div class="reveal">
+                    <h2 class="text-3xl md:text-4xl font-bold text-slate-900 mb-6">Social Health Updates</h2>
+                    <p class="text-lg text-slate-600 mb-8">Follow for regular updates, health tips, and surgical success stories. We believe in educating our patients.</p>
+                    
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-blue-100 flex-shrink-0 flex items-center justify-center text-blue-600">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Daily Health Tips</h4>
+                                <p class="text-sm text-slate-500">Quick reels and posts about maintaining ENT health.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-green-100 flex-shrink-0 flex items-center justify-center text-green-600">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold">Patient Testimonials</h4>
+                                <p class="text-sm text-slate-500">Real stories from recovered patients at Shaikh Zayed Hospital.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Secondary Instagram Mockup -->
+                <div class="reveal flex justify-center">
+                    <div class="w-full max-w-[340px] md:max-w-[380px] bg-white p-3 rounded-[40px] shadow-xl rotate-3 hover:rotate-0 transition duration-500">
+                         <div class="bg-slate-100 rounded-[30px] aspect-square flex flex-col items-center justify-center border-2 border-dashed border-slate-300">
+                            <i class="fab fa-instagram text-5xl text-slate-300 mb-2"></i>
+                            <p class="font-bold text-slate-400">POST PREVIEW</p>
+                            <p class="text-xs text-slate-400">@dr_sohaib_fraz</p>
+                         </div>
+                         <div class="p-6">
+                            <div class="w-full h-2 bg-slate-100 rounded-full mb-3"></div>
+                            <div class="w-3/4 h-2 bg-slate-100 rounded-full"></div>
+                            <div class="mt-6 flex gap-2">
+                                <div class="h-8 w-24 bg-blue-600 rounded-full"></div>
+                                <div class="h-8 w-8 bg-slate-100 rounded-full"></div>
+                            </div>
+                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="location" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="bg-slate-900 rounded-[40px] overflow-hidden shadow-2xl flex flex-col lg:flex-row">
+                <!-- Location Info -->
+                <div class="p-10 lg:w-1/3 text-white flex flex-col justify-center">
+                    <h2 class="text-3xl font-bold mb-8">Visit Our Clinic</h2>
+                    
+                    <div class="space-y-8">
+                        <div class="flex gap-4">
+                            <div class="bg-blue-600/20 w-12 h-12 rounded-xl flex items-center justify-center text-blue-400 shrink-0">
+                                <i class="fas fa-location-dot text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Address</h4>
+                                <p class="text-slate-400 text-sm">A, UHS street, Block A Muslim Town, Lahore, Pakistan</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4">
+                            <div class="bg-teal-600/20 w-12 h-12 rounded-xl flex items-center justify-center text-teal-400 shrink-0">
+                                <i class="fas fa-phone-volume text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-lg">Contact Number</h4>
+                                <p class="text-slate-400 text-sm">0327-1151540</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://www.google.com/maps/dir/?api=1&destination=Dr+Hafiz+Sohaib+Fraz+Muslim+Town+Lahore" class="mt-12 bg-white text-slate-900 py-4 px-6 rounded-2xl font-bold text-center hover:bg-blue-50 transition">
+                        Get Directions
+                    </a>
+                </div>
+
+                <!-- Google Map Iframe -->
+                <div class="lg:w-2/3 h-[400px] lg:h-auto min-h-[400px]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3401.6581446573114!2d74.3101981!3d31.50607909999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391903aca0917e4f%3A0xaf096e75819c2991!2sDr%20Hafiz%20Sohaib%20Fraz%20Ear%20Nose%20Face%20Neck%20Surgeon%20Shaikh%20Zayed%20Hospital%20Lahore!5e0!3m2!1sen!2s!4v1778610278466!5m2!1sen!2s" 
+                        class="w-full h-full grayscale opacity-80" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-slate-50 py-12 border-t">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <div class="flex items-center justify-center gap-2 mb-6">
+                <div class="bg-blue-600 w-8 h-8 rounded flex items-center justify-center text-white text-xs">
+                    <i class="fas fa-stethoscope"></i>
+                </div>
+                <span class="font-bold text-slate-900">Dr. Hafiz Sohaib Fraz</span>
+            </div>
+            <p class="text-slate-500 text-sm max-w-md mx-auto mb-8">
+                Leading ENT Surgeon at Shaikh Zayed Hospital, committed to high-quality patient outcomes.
+            </p>
+            <div class="flex justify-center gap-6 mb-8">
+                <a href="#" class="text-slate-400 hover:text-blue-600 transition text-xl"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-slate-400 hover:text-blue-600 transition text-xl"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="text-slate-400 hover:text-blue-600 transition text-xl"><i class="fab fa-linkedin"></i></a>
+            </div>
+            <div class="text-xs text-slate-400 font-medium uppercase tracking-widest">
+                &copy; 2024 Surgeon Portfolio | All Rights Reserved
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Reveal elements on scroll
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        // Initial call
+        window.onload = reveal;
+
+        // Mobile Menu Toggle
+        function toggleMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.getElementById('menu-icon');
+            menu.classList.toggle('open');
+            if(menu.classList.contains('open')) {
+                icon.classList.replace('fa-bars', 'fa-times');
+            } else {
+                icon.classList.replace('fa-times', 'fa-bars');
+            }
+        }
+    </script>
+
+</body>
+</html>
